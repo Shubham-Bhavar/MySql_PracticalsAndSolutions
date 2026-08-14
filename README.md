@@ -16,14 +16,6 @@ The projects in this repository cover various SQL concepts, including:
 - Triggers
 - Data Analysis Queries
 
-## Projects Included
-1. Student Management System
-2. Library Management Database
-3. Employee Management System
-4. Hospital Management Database
-5. E-Commerce Database
-6. Sales Analysis Queries
-
 ## Technologies Used
 - SQL
 - MySQL / PostgreSQL / SQL Server
