@@ -3,21 +3,19 @@
 
     Problem:
     --------
-    Find customers who satisfy ALL of these conditions:
+    Find customers who:
 
     1. Made at least 3 orders.
     2. At least 60% of their orders were during peak hours:
        11:00-14:00 or 18:00-21:00.
-    3. Average rating of rated orders is at least 4.0.
-    4. At least 50% of their orders have a rating.
+    3. Have an average rating of at least 4.0.
+    4. Have ratings for at least 50% of their orders.
 
     Return:
     customer_id,
     total_orders,
     peak_hour_percentage,
     average_rating
-
-    Round peak_hour_percentage and average_rating to 2 decimal places.
 
     Order by average_rating DESC, then customer_id DESC.
 */
@@ -35,14 +33,10 @@ SELECT
                 THEN 1
                 ELSE 0
             END
-        ) / COUNT(*),
-        2
+        ) / COUNT(*)
     ) AS peak_hour_percentage,
 
-    ROUND(
-        AVG(order_rating),
-        2
-    ) AS average_rating
+    ROUND(AVG(order_rating), 2) AS average_rating
 
 FROM restaurant_orders
 
